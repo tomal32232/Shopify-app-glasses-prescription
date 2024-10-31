@@ -1,0 +1,57 @@
+{% if product.metafields.custom.requires_prescription.value %}
+  <div id="prescription-form" class="prescription-form">
+    <h2>Prescription Details</h2>
+    <form id="prescription-details">
+      <div class="eye-section">
+        <h3>Left Eye</h3>
+        <div class="form-field">
+          <label for="left-sphere">Sphere</label>
+          <input type="number" id="left-sphere" name="left-sphere" step="0.25" required>
+        </div>
+        <div class="form-field">
+          <label for="left-cylinder">Cylinder</label>
+          <input type="number" id="left-cylinder" name="left-cylinder" step="0.25" required>
+        </div>
+        <div class="form-field">
+          <label for="left-axis">Axis</label>
+          <input type="number" id="left-axis" name="left-axis" min="0" max="180" required>
+        </div>
+      </div>
+
+      <div class="eye-section">
+        <h3>Right Eye</h3>
+        <div class="form-field">
+          <label for="right-sphere">Sphere</label>
+          <input type="number" id="right-sphere" name="right-sphere" step="0.25" required>
+        </div>
+        <div class="form-field">
+          <label for="right-cylinder">Cylinder</label>
+          <input type="number" id="right-cylinder" name="right-cylinder" step="0.25" required>
+        </div>
+        <div class="form-field">
+          <label for="right-axis">Axis</label>
+          <input type="number" id="right-axis" name="right-axis" min="0" max="180" required>
+        </div>
+      </div>
+
+      <button type="submit" class="button button--primary">
+        Add to Cart with Prescription
+      </button>
+    </form>
+  </div>
+{% else %}
+  <div style="display: none;" data-debug="no-prescription-required">
+    Metafield value: {{ product.metafields.custom.requires_prescription.value }}
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Prescription Form",
+  "target": "section",
+  "templates": ["product"],
+  "stylesheet": "prescription-form.css",
+  "javascript": "prescription-form.js",
+  "settings": []
+}
+{% endschema %}

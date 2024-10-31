@@ -1,0 +1,9 @@
+name = "prescription-form"
+type = "theme"
+handle = "prescription-form"
+
+[[metafields]]
+namespace = "custom"
+key = "requires_prescription"
+type = "boolean"
+

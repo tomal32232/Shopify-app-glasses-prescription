@@ -1,0 +1,33 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "477a466ea285c1b949be19f9c90a6efc"
+name = "Prescription Eye Lens"
+handle = "prescription-eye-lens-1"
+application_url = "https://developer-chance-run-reasonably.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products,read_themes,write_themes"
+
+[auth]
+redirect_urls = [
+  "https://developer-chance-run-reasonably.trycloudflare.com/auth/callback",
+  "https://developer-chance-run-reasonably.trycloudflare.com/auth/shopify/callback",
+  "https://developer-chance-run-reasonably.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-10"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+[pos]
+embedded = false
+
+[build]
+dev_store_url = "rokibulhasantomal.myshopify.com"
+automatically_update_urls_on_dev = true
+include_config_on_deploy = true
