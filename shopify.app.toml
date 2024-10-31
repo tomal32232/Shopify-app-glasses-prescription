@@ -3,7 +3,7 @@
 client_id = "477a466ea285c1b949be19f9c90a6efc"
 name = "Prescription Eye Lens"
 handle = "prescription-eye-lens-1"
-application_url = "https://developer-chance-run-reasonably.trycloudflare.com"
+application_url = "https://indicators-presence-india-reviewing.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -12,9 +12,9 @@ scopes = "write_products,read_themes,write_themes"
 
 [auth]
 redirect_urls = [
-  "https://developer-chance-run-reasonably.trycloudflare.com/auth/callback",
-  "https://developer-chance-run-reasonably.trycloudflare.com/auth/shopify/callback",
-  "https://developer-chance-run-reasonably.trycloudflare.com/api/auth/callback"
+  "https://indicators-presence-india-reviewing.trycloudflare.com/auth/callback",
+  "https://indicators-presence-india-reviewing.trycloudflare.com/auth/shopify/callback",
+  "https://indicators-presence-india-reviewing.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

@@ -33,12 +33,18 @@
           <input type="number" id="right-axis" name="right-axis" min="0" max="180" required>
         </div>
       </div>
-
       <button type="submit" class="button button--primary">
         Add to Cart with Prescription
       </button>
     </form>
   </div>
+
+  <style>
+    .shopify-payment-button,
+    form[action="/cart/add"] .product-form__buttons {
+      display: none !important;
+    }
+  </style>
 {% else %}
   <div style="display: none;" data-debug="no-prescription-required">
     Metafield value: {{ product.metafields.custom.requires_prescription.value }}
